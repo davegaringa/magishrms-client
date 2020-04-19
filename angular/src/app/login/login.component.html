@@ -1,0 +1,26 @@
+<section fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card fxFlex="400px" fxFlex.xs="100%">
+    <mat-card-content>
+      <mat-card-title>Please login to continue</mat-card-title>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column wrap"
+              fxLayoutAlign="center center" fxLayoutGap="10px">
+
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="User" formControlName="userName" required>
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            Please input your user name
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            Please input your password
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>

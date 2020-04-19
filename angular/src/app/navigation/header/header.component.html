@@ -1,20 +1,20 @@
 <mat-toolbar color="primary">
-  <div fxHide.gt-xs>
+  <div *ngIf="isUserAuthenticated()">
       <button mat-icon-button (click)="onToggleSidenav()">
           <mat-icon>menu</mat-icon>
       </button>
   </div>
   <div>
-      <a routerLink="/home">Owner-Account</a>
+      <a routerLink="/home">Magis HRMS</a>
   </div>
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
       <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <li>
-              <a routerLink="/owner/owners">Owner Actions</a>
+          <li *ngIf="isUserAuthenticated()">
+              <a (click)="logOut()">Logout</a>
           </li>
-          <li>
-              <a routerLink="/account">Account Actions</a>
+          <li *ngIf="!isUserAuthenticated()">
+              <a routerLink="/login">Login</a>
           </li>
-      </ul>
+        </ul>
   </div>
 </mat-toolbar>

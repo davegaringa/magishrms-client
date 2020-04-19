@@ -1,19 +1,15 @@
 <section fxLayout="column" fxFlexAlign="stretch">
   <div fxFlexAlign="center">
-    <p>Welcome to the Material Angular OwnerAccount Application</p>
+    <p>Welcome to Magis HRMS</p>
   </div>
 
-  <p>In this application we are going to work with:</p>
-
   <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
-    <mat-tab label="Material Components"> 
-      <p>We are going to use different material components to create nice looking angular app.</p> 
+    <mat-tab label="About"> 
+      <p>This is a sample application built using ASP.Net Core Web API, Angular and MySQL.</p>
+      <p>This is a work in progress...</p> 
+      <p>The Web API and Angular application is hosted in <a href="https://www.heroku.com/">Heroku</a> </p>
+      <p>This is the Angular part of the project. Please click <a href="https://magishrms.herokuapp.com/swagger">here</a> for the Web API.</p>
+      <p>Please log in using username: admin, password: @admin123</p>
     </mat-tab>
-    <mat-tab label="Consume .NET Core Web API">
-       <p>We will consume our .NET Core applicatoin. Basicaly, we will create complete CRUD client app.</p>
-      </mat-tab>
-    <mat-tab label="Fully responsive navigation menu">
-       <p>By using material components, we are going to create fully responsive navigation menu, with its side-bar as well.</p>
-      </mat-tab>
   </mat-tab-group>
 </section>

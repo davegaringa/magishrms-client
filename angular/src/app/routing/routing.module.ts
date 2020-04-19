@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
+import { LoginComponent } from '../login/login.component';
 import { NotFoundComponent } from '../error-pages/not-found/not-found.component';
 import { ServerErrorComponent } from '../error-pages/server-error/server-error.component';
 
 const ownerRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'owner', loadChildren: "./../owner/owner.module#OwnerModule" },
   { path: '404', component: NotFoundComponent },
   { path: '500', component: ServerErrorComponent },
